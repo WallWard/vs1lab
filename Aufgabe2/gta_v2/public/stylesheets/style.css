@@ -1,0 +1,113 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+header,footer{
+  color: white;
+  background-color: rgb(90, 90, 90);
+}
+
+/* padding fürn footer */
+
+main{    
+  display : flex;
+  flex-direction: row;  
+  /* Unteres braucht man nicht, standart Werte sind da schon drin*/
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.discovery{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  
+  align-items: stretch;
+}
+
+.resandmap{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.taglist{
+  order : 1;
+}
+
+#firstres, #secondres{ 
+  padding: 3px;
+  width: 100%;
+  margin: 5px;
+  border: solid rgb(255, 217, 47) 4px;
+  background-color: rgba(45, 209, 132, 0.664);
+  align-self: flex-start;
+}
+
+
+.tagmap{
+  width: 100%;
+  flex: 2;
+  margin-top: 5px;
+  margin-left:4%;
+  order : 2;
+}
+
+#results{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+input{
+  width: 234px;
+  height: 26px;
+}
+label{ 
+  padding-top: 12px;
+  font-weight : bold;
+}
+fieldset{
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  flex-grow: auto;
+}
+
+a {
+  color: #00B7FF;  
+}
+/* limittesting*/
+@media only screen and (max-width: 900px){
+  header,footer{
+    background-color: black;    
+  }
+
+  main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(94, 94, 94, 0.788);
+  }
+
+  .resandmap{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  #results{
+    width: 420px;
+  }
+
+  .tagmap{
+    margin: 0px;
+  }
+
+  .caption{
+    color: whitesmoke;
+    align-self: flex-start;
+  }
+}
